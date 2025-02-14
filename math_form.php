@@ -1,6 +1,7 @@
 <?php
 $localIp=$_SERVER[ 'SERVER_ADDR' ]
-$publicIp = file_get_contents('http://169.254.169.254/latest/meta-data/public-ipv4');
+$publicIpcmd = escapeshellcmd("ec2-metadata -v");
+$publicIp = shell_exec($publicIpcmd);
 ?>
 <html>
 <h1>Welcome to the Calculator!</h1>
