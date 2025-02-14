@@ -1,5 +1,5 @@
 <?php
-$localIp=$_SERVER[ 'SERVER_ADDR' ]
+$localIp=$_SERVER[ 'SERVER_ADDR' ];
 $publicIpcmd = escapeshellcmd("ec2-metadata -v");
 $publicIp = shell_exec($publicIpcmd);
 ?>
