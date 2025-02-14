@@ -1,5 +1,9 @@
+<?php
+$ipaddress=$_SERVER[ 'SERVER_ADDR' ]
+?>
 <html>
 <h1>Welcome to the Calculator!</h1>
+<h2>This application is hosted on my EC2 instance with Public IP:<?php echo $ipaddress; ?></h2>
 <h2>Enter 2 numbers and operation</h2>
 <form action="process_math.php" method="post">
 
